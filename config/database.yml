@@ -1,0 +1,20 @@
+development:
+  adapter: postgresql
+  database: samaritan_espino_dev
+  host: localhost
+  username: ragar90
+  password: jhlive
+
+test:
+  adapter: postgresql
+  database: samaritan_espino_test
+  host: localhost
+  username: ragar90
+  password: jhlive
+
+production:
+  adapter: postgresql
+  database: samaritan_espino_prod
+  host: localhost
+  username: ragar90
+  password: jhlive
