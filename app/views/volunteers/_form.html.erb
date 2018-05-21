@@ -1,4 +1,5 @@
 <%= form_with(model: volunteer, local: true) do |form| %>
+  <%= form.hidden_field :type %>
   <% if volunteer.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(volunteer.errors.count, "error") %> prohibited this volunteer from being saved:</h2>
@@ -25,16 +26,12 @@
     <%= form.label :email %>
     <%= form.text_field :email %>
   </div>
-
-  <div class="field">
-    <%= form.label :host_capacity %>
-    <%= form.text_field :host_capacity %>
-  </div>
-
-  <div class="field">
-    <%= form.label :type %>
-    <%= form.text_field :type %>
-  </div>
+  <% if volunteer.is_host? %>
+    <div class="field">
+      <%= form.label :host_capacity %>
+      <%= form.number_field :host_capacity %>
+    </div>
+  <%end%>
 
   <div class="actions">
     <%= form.submit %>

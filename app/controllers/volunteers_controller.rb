@@ -15,6 +15,7 @@ class VolunteersController < ApplicationController
   # GET /volunteers/new
   def new
     @volunteer = Volunteer.new
+    @volunteer.type = params[:type]
   end
 
   # GET /volunteers/1/edit

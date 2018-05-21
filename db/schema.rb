@@ -19,7 +19,8 @@ ActiveRecord::Schema.define(version: 2018_05_19_210504) do
     t.string "name"
     t.string "lastname"
     t.string "email"
-    t.string "host_capacity"
+    t.string "phone_number"
+    t.integer "host_capacity"
     t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
